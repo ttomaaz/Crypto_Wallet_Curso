@@ -2,14 +2,13 @@
 <p>Criando um helper de tempo</p>
 <p><strong>Data: </strong> <%= convtime Date.today %> </p>
 <p>Testando o "helper link_to"</p>
-<ul>
-  <%= link_to "Cadastro de Moedas", coins_path%>
-</ul>
+
+<%= render "menu" %>
 
 
 <p>
   Monstrando em qual ambiente estamos com ajuda de um helper:
-  <p> 
+  <p>
     <strong> <%= ambiente_desenvolvimento %> </strong>
   </p>
 </p>
