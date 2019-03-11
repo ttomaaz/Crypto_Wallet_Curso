@@ -41,8 +41,8 @@ namespace :dev do
           show_spinner("Apagando DB...") { %x(rails db:drop) }
           show_spinner("Criando DB...") { %x(rails db:create) }
           show_spinner("Migrando DB...")  { %x(rails db:migrate) }
-          %x(rails dev:add_coins)
           %x(rails dev:add_mining_types)
+          %x(rails dev:add_coins)
         else
           puts "Você não está no ambiente de desevolvimento!"
       end
@@ -55,37 +55,43 @@ namespace :dev do
           {
             description: "Bitcoin",
             acronym: "BTC",
-            url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png"
+            url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png",
+            mining_type: MiningType.find_by(acronym: 'PoW') ##procurando dentro do model MiningType o campo acronym: para atribuir ao primeiro elemento do model Coin###
           },
 
           {
             description: "Ethereum",
             acronym: "ETH",
-            url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png/600px-ETHEREUM-YOUTUBE-PROFILE-PIC.png"
+            url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png/600px-ETHEREUM-YOUTUBE-PROFILE-PIC.png",
+            mining_type: MiningType.all.sample ##procurando por um elemento aleatorio dentro do model MiningType##
           },
 
           {
             description: "Litecoin",
             acronym: "LTC",
-            url_image: "https://banner2.kisspng.com/20180525/wal/kisspng-litecoin-cryptocurrency-bitcoin-logo-cryptocurrency-5b081f1979b524.5871818715272589054985.jpg"
+            url_image: "https://banner2.kisspng.com/20180525/wal/kisspng-litecoin-cryptocurrency-bitcoin-logo-cryptocurrency-5b081f1979b524.5871818715272589054985.jpg",
+            mining_type: MiningType.all.sample
           },
 
           {
             description: "Monero",
             acronym: "MNO",
-            url_image: "https://www.getmonero.org/press-kit/symbols/monero-symbol-1280.png"
+            url_image: "https://www.getmonero.org/press-kit/symbols/monero-symbol-1280.png",
+            mining_type: MiningType.all.sample
           },
 
           {
             description: "Zcash",
             acronym: "ZCH",
-            url_image: "https://z.cash/wp-content/uploads/2018/09/zcash-icon-fullcolor.png"
+            url_image: "https://z.cash/wp-content/uploads/2018/09/zcash-icon-fullcolor.png",
+            mining_type: MiningType.all.sample
           },
 
           {
             description: "Ripple",
             acronym: "RPP",
-            url_image: "https://criptozoom.com/wp-content/uploads/2018/08/ripple.png"
+            url_image: "https://criptozoom.com/wp-content/uploads/2018/08/ripple.png",
+            mining_type: MiningType.all.sample
           }
         ]
 
