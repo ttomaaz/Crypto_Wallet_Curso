@@ -1,0 +1,21 @@
+pt-BR:
+  hello: "Olá Mundo"
+  links:
+    show: "Mostrar"
+    edit: "Editar"
+    delete: "Apagar"
+    confirm: "Confirmar?"
+    back: "Voltar"
+    description: "Descrição"
+    acronym: "Sigla"
+    url_image: "Url Imagem"
+    select: "Selecione..."
+    create: "Criar"
+  mining_type:
+    add_new_mining_type: "Novo Tipo de Mineração"
+    title: "Tipos de Mineração"
+    edit: "Editar Tipos de Mineração"
+  coin:
+    add_new_coin: "Nova Moeda"
+    title: "Moeda"
+    edit: "Editar Moeda"

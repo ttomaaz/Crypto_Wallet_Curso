@@ -31,3 +31,21 @@
 
 en:
   hello: "Hello world"
+  links:
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Confirm?"
+    back: "Back"
+    description: "Description"
+    acronym: "Acronym"
+    url_image: "Url Image"
+    select: "Select..."
+    create: "Create"
+  mining_type:
+    add_new_mining_type: "New Mining Type"
+    title: "Mining Types"
+  coin:
+    add_new_coin: "New Coin"
+    title: "Coin"
+    edit: "Edit Coin"
